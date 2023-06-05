@@ -1,0 +1,74 @@
+.container_login{
+    margin-bottom: 60px;
+    width: 350px;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 10px; 
+    box-shadow: -5px 5px 20px rgba(114, 107, 107, 0.3);
+   
+}
+
+.form_login{
+    
+    padding: 10px 0px 20px 0;
+    text-align: center;
+    border-radius: 15px;
+}
+.form_login input{
+    width: 70%;
+    margin-bottom: 20px;
+    padding: 12px 12px;
+    box-sizing: border-box;
+    border: 1px solid #d6c6c6;
+    border-radius: 3px;
+}
+.form_login button{
+    width: 50%;
+    height: 40px;
+    border: 0px;
+    border-radius: 15px;
+    font-size: 15px;
+    margin: 10px auto;
+    cursor: pointer;
+    padding: 0px 18px;
+    margin-top: 8px;
+    text-align: center; 
+    background:  rgba(100, 147, 201, 0.74);
+    color: rgb(255, 255, 255); 
+    }
+.col p{
+    margin-bottom: 8px;
+    margin-top: 8px;
+    overflow: hidden;
+    text-align: center; 
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+.login{
+    margin: 5px;
+    padding: 10px;
+}
+.login h3{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+}
+
+.optional_facebook{
+    display: inline-block;
+    margin: 20px
+}
+.optional_google{
+    display: inline-block;
+    margin: 20px
+}
+.inscrever{
+    margin: 0px 0px 30px 0px;
+}
+.optional_google:hover{
+    color: rgb(21, 211, 30);
+}
+.optional_facebook:hover{
+    color: rgb(1, 77, 177);
+}
