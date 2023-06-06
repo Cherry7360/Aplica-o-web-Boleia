@@ -1,11 +1,11 @@
 
 import './Signup.css'
-//import Formvalidation from './Formvalidation';
+import Formvalidation from './Formvalidation';
 import {Link} from 'react-router-dom';
-//import { auth} from "../../firebase";
+import { auth} from "../../firebase";
 import{React, useState} from 'react'
 import { createUserWithEmailAndPassword } from "firebase/auth"; 
-//import { collection,addDoc} from "firebase/firestore"
+import { collection,addDoc} from "firebase/firestore"
 
 
 
@@ -18,7 +18,7 @@ function Signup(){
     })
   
     const [erros, setErro] =useState({})
-    //const userCollection = collection(db,"users")
+    const userCollection = collection(db,"users")
    
 
 
