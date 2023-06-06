@@ -5,7 +5,7 @@ function Home(){
         <>
             <h1>Home Page</h1>
           
-            <p>Email user:  {emailGoogle}</>
+            <p>Email user:  {emailGoogle}</p>
         
        
         </>
