@@ -1,5 +1,5 @@
 import './Signin.css'
-import { useNavigate } from 'react-router-dom';
+//import { useNavigate } from 'react-router-dom';
 //import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { React, useEffect, useState } from "react";
 import { UserAuth } from '../context/AuthContext';
@@ -22,10 +22,6 @@ function Signin(){
         }
     }
 
-    useEffect(()=>{
-        if(user != null)
-        navegate('/welcome')
-    },[])
     return(
         <div>
                 <div className='container_login'>
@@ -74,8 +70,9 @@ function Signin(){
            </div> 
     )}
 export default Signin;
-//<Link to="/registrar"> Registra-se</Link>
-/**
- *  
- */
-/**         */
+
+  
+ /*<Link to="/registrar"> Registra-se</Link> useEffect(()=>{
+        if(user != null)
+        navegate('/welcome')
+    },[])         */
