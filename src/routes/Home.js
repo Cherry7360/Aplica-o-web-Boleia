@@ -1,11 +1,11 @@
 import {UserAuth} from'../components/context/AuthContext'
 function Home(){
-    const {user,emailGoogle,nameGoogle,porfilePicGoogle}= UserAuth()
+    const {emailGoogle}= UserAuth()
     return(
         <>
             <h1>Home Page</h1>
           
-            
+            <p>Email user:  {emailGoogle}</>
         
        
         </>
