@@ -1,9 +1,8 @@
 import './Signin.css'
-//import { Link} from 'react-router-dom';
+//import { Link,useNavigate } from 'react-router-dom';
 //import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { React, useEffect, useState } from "react";
 import { UserAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
 function Signin(){
 // variaveis
     const navegate =useNavigate()
@@ -25,7 +24,7 @@ function Signin(){
 
     useEffect(()=>{
         if(user != null)
-        navegate('/home')
+        navegate('/welcome')
     },[user])
     return(
         <div>
