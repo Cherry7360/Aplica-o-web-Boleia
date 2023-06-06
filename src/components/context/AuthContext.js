@@ -1,16 +1,22 @@
 import { createContext, useContext, useEffect, useState } from 'react'
 import { auth } from '../../firebase'
-import { signInWithPopup ,signOut,AuthStateChanged} from "firebase/auth";
+import { signInWithPopup ,signOut,onAuthStateChanged,GoogleAuthProvider} from "firebase/auth";
 
 const AuthContext = createContext()
 
  export function AuthContextProvider({ children }) {
-    const [user, setCurrentUser] = useState()
   
+    const [user, setCurrentUser] = useState()
+   const [emailGoogle,setEmailGoogle]= useState()
+    const [nameGoogle,setNameGoogle]= useState()
+    const [porfilePicGoogle,setPorfilePicGoogle]= useState()
     const signInGoogle=()=>{
         const provider= new GoogleAuthProvider()
         signInWithPopup(auth,provider)
         .then((result)=>{
+         setNameGoogle(result.user.displayName)
+            setEmailGoogle(result.user.email)
+            setPorfilePicGoogle(result.user.photoURL)
             console.log(result)
           }).catch((error)=>{
             alert('erro google signin')
