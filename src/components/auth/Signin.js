@@ -25,7 +25,7 @@ function Signin(){
     useEffect(()=>{
         if(user != null)
         navegate('/welcome')
-    },[user])
+    },[])
     return(
         <div>
                 <div className='container_login'>
