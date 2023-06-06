@@ -1,11 +1,11 @@
 
 import './Signup.css'
-import Formvalidation from './Formvalidation';
+//import Formvalidation from './Formvalidation';
 import {Link} from 'react-router-dom';
-import { auth,db } from "../../firebase";
+//import { auth} from "../../firebase";
 import{React, useState} from 'react'
 import { createUserWithEmailAndPassword } from "firebase/auth"; 
-import { collection,addDoc} from "firebase/firestore"
+//import { collection,addDoc} from "firebase/firestore"
 
 
 
@@ -18,18 +18,12 @@ function Signup(){
     })
   
     const [erros, setErro] =useState({})
-    const userCollection = collection(db,"users")
+    //const userCollection = collection(db,"users")
    
 
 
     //funções
-    const receber = async ()=>{
-        const query = await db.collection("users").get()
-        query.forEach(doc => {
-            
-            console.log(`${doc.email}`)
-        });
-    }
+    
     const  createUser= async (e)=>{
         e.preventDefault();
         setErro(Formvalidation(userData));
@@ -78,7 +72,7 @@ function Signup(){
                                 <input type='password' placeholder='Palavra-passe' name='password' onChange={handleChange } value={userData.password}/>
                                 {erros.password && <p className='erro'>{erros.password}</p> }
                                 <input type='password' placeholder='Confirmar palavra-passe'/>
-                               <button type="submit" onClick={receber} >Sign up</button>
+                               <button type="submit"  >Sign up</button>
                             </div>
                         </form>
                         <div className='back-login'>
