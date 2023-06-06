@@ -1,7 +1,7 @@
 import './Signin.css'
 //import { useNavigate } from 'react-router-dom';
 //import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { React, useEffect, useState } from "react";
+import { React,useState } from "react";
 import { UserAuth } from '../context/AuthContext';
 function Signin(){
 // variaveis
@@ -9,7 +9,7 @@ function Signin(){
    
     const [email,setEmail]= useState('')
     const [password,setPassword]= useState('')
-    const {signInGoogle,user}= UserAuth();
+    const {signInGoogle}= UserAuth();
     //const userCollection = collection(db,"users")
 // funções
 
