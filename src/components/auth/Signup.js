@@ -38,7 +38,7 @@ function Signup(){
                         </div> 
                     </div>
                     <div> 
-                        <form className='form_registrar' onSubmit={createUser} >
+                        <form className='form_registrar'  >
                             <div>
                                 <input type='name' placeholder='User name'/>
                                 <input type='email' placeholder='Email' name='email' value={userData.email}  
