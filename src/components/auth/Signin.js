@@ -1,15 +1,14 @@
 import './Signin.css'
-//import { useNavigate } from 'react-router-dom';
-//import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useNavigate } from 'react-router-dom';
 import { React,useState } from "react";
 import { UserAuth } from '../context/AuthContext';
 function Signin(){
 // variaveis
    
-   
+    const navegate =useNavigate()
     const [email,setEmail]= useState('')
     const [password,setPassword]= useState('')
-    const {signInGoogle}= UserAuth();
+    const {signInGoogle,user}= UserAuth();
     //const userCollection = collection(db,"users")
 // funções
 
