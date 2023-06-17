@@ -19,12 +19,13 @@ function Navbar(){
     return(
         <>
         <nav>
-            <div> <NavLink to="/welcome" >Boleia</NavLink >
+            <div> <NavLink className="icon" to="/welcome" >Boleia</NavLink >
           </div>
          <div>
-                <ul id="menu">
+                <ul className="menu">
                     <li><NavLink to="/home" 
-                       className={({ isActive, isPending }) =>
+                       className={
+                        ({ isActive, isPending }) =>
                        isPending ? "pending" : isActive ? "active" : ""
                      }> Home </NavLink></li>
                      <li><NavLink to="/rotas" 
