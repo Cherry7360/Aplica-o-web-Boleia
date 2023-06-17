@@ -1,9 +1,11 @@
-import { auth,db } from "../../firebase";
+//import { auth,db } from "../../firebase";
 function Formvalidation(userData){
 
     const erros ={};
    
-   
+    if(!userData.username){
+        erros.username="Obrigatório preencher o campo!"
+    }
     if(!userData.email){
         erros.email="Obrigatório preencher o campo!"
     }
