@@ -9,7 +9,7 @@ import { UserAuth, } from '../context/AuthContext';
 function Signin(){
 // variaveis
 
-    const navegate =useNavigate()
+    //const navegate =useNavigate()
 
     const [email,setEmail]= useState('')
     const [password,setPassword]= useState('')
