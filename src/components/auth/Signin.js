@@ -3,7 +3,7 @@ import './Signin.css'
 import { Link} from 'react-router-dom';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../../firebase'
-import { React, useEffect, useState } from "react";
+import { React, useState } from "react";
 import { UserAuth, } from '../context/AuthContext';
 //import { useNavigate } from 'react-router-dom';
 function Signin(){
@@ -13,7 +13,7 @@ function Signin(){
 
     const [email,setEmail]= useState('')
     const [password,setPassword]= useState('')
-    const {signInGoogle,user}= UserAuth();
+    const {signInGoogle}= UserAuth();
     
 // funções
    
