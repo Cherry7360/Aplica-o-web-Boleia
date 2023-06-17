@@ -7,6 +7,7 @@ import Registrar from './routes/Registrar';
 import About from'./routes/About'
 import Rotas from'./routes/Rotas';
 import Home from './routes/Home';
+import Forms  from './routes/Forms';
 
 import Principal from './routes/Principal';
 import {AuthContextProvider} from './components/context/AuthContext'
@@ -23,6 +24,7 @@ const rotas = createBrowserRouter([
       { path: '/rotas', element: <Rotas /> },
       { path: '/about', element: <About />  },
       { path: '/registrar', element: <Registrar /> }
+       { path: '/forms', element: <Forms />}
       
       
     ],
