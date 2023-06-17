@@ -1,16 +1,31 @@
+// Leticia Zego
 import './Signin.css'
+import { Link} from 'react-router-dom';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from '../../firebase'
+import { React, useEffect, useState } from "react";
+import { UserAuth, } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import { React,useState } from "react";
-import { UserAuth } from '../context/AuthContext';
 function Signin(){
 // variaveis
-   
+
     const navegate =useNavigate()
+
     const [email,setEmail]= useState('')
     const [password,setPassword]= useState('')
     const {signInGoogle,user}= UserAuth();
-    //const userCollection = collection(db,"users")
+    
 // funções
+   
+    const signIn=(e)=>{
+        e.preventDefault();
+        signInWithEmailAndPassword(auth,email,password).then((useCredential)=>{
+            console.log(useCredential);
+        }).catch((error)=>{
+            console.log(error)
+        })
+         
+    }
 
     const handleGoogle= async()=>{
         try{
@@ -21,16 +36,21 @@ function Signin(){
         }
     }
 
+    useEffect(()=>{
+        if(user != null)
+        navegate('/home')
+    },[user])
+
     return(
         <div>
                 <div className='container_login'>
-                    <div className='icon'>
+                    <div className='title_login'>
                         <div className='login'>
                             <h3>Login</h3>
                         </div>    
                     </div>
                     <div className='col' >
-                        <form className='form_login' >
+                        <form className='form_login'  onSubmit={signIn}>
                             <div>
                                 
                                 <input type='email' placeholder='email'  value={email} 
@@ -62,6 +82,7 @@ function Signin(){
                         <div className='inscrever'>
                             
                             Não tem conta?
+                            <Link className="Registra-se " to="/registrar"> Registra-se</Link>
                         </div>
                     </div>
                     
@@ -69,9 +90,3 @@ function Signin(){
            </div> 
     )}
 export default Signin;
-
-  
- /*<Link to="/registrar"> Registra-se</Link> useEffect(()=>{
-        if(user != null)
-        navegate('/welcome')
-    },[])         */
