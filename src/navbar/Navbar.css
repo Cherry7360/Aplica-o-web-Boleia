@@ -1,9 +1,9 @@
 nav{
     display: flex;
     justify-content: space-between;
-    background: rgba(165, 179, 166, 0.616); 
+    background: rgba(7, 101, 196, 0.74); 
     padding: 20px 80px;
-    box-shadow: 0 5px 15px;
+    box-shadow: 0 2px 4px;
    
 }
 p{
@@ -12,27 +12,50 @@ p{
     font-size: 1.3rem;
     font-weight: 600;
 }
-#menu a.active {
+.active {
+    /* Estilos para quando o link estiver ativo */
+    color: rgb(220, 228, 223);
+    font-weight: bold;
+    
+  }
+  
+  .pending {
+    /* Estilos para quando o link estiver pendente */
+    color: gray;
+    font-style: italic;
+    
+  }
+.icon{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: rgb(0, 238, 255);
+}
+  
+.menu active {
     color: rgb(28, 107, 226);
   }
-#menu
+.menu
 {
+    
     display: flex;
     align-items: center;
     justify-content: center ;
     
 }
-#menu li{
+.menu a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.menu li {
     list-style: none;
     padding: 0 20px;
     position: relative;
     font-size: 1.3rem;
+    text-decoration: none;
+    color: aqua;
 }
-#menu li a{
-    position: relative;
-    text-decoration: none;}
 
-#menu li:after{
+.menu li:after{
     content:"";
     position: absolute;
     height: 2px;
@@ -40,10 +63,10 @@ p{
     left: 0;
     bottom: -10px;
 }
-#menu li:hover:after {
-    color: rgb(28, 107, 226);
+.menu li:hover:after {
+    color: rgb(192, 203, 219);
     width: 100%;
-    background:rgb(28, 107, 226);
+    background: rgb(192, 203, 219);
 }
 .porfile{
     margin: 1px;
@@ -71,5 +94,7 @@ p{
     color: rgb(28, 107, 226); 
     }
 
+
+ 
 
  
