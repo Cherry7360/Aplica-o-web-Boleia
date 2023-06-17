@@ -54,7 +54,10 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 10px;
 }
-
+.Registra-se {
+    text-decoration: none;
+    color: rgb(29, 85, 204);
+}
 .optional_facebook{
     display: inline-block;
     margin: 20px
