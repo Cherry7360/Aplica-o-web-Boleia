@@ -1,5 +1,7 @@
 function About(){
     return(
-        <>About Us</>
+        <div>
+            Not implemented yet
+        </div>
     )
 } export default About
